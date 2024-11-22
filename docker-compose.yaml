@@ -28,6 +28,9 @@ services:
     command: ["--storage-driver", "overlay2"]
 
   jenkins-blueocean:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: myjenkins-blueocean:2.426.2-1
     container_name: jenkins-blueocean
     networks:
