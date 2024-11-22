@@ -1,7 +1,6 @@
 node {
     stage('Build') {
         docker.image('node:16-buster-slim').inside('-p 3000:3000') {
-            sh 'rm  node_modules && rm  package-lock.json'
             sh 'npm install'
         }
     }
